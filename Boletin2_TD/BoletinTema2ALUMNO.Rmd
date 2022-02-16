@@ -114,7 +114,7 @@ dateDownloaded <- date()
 
 ```{r}
 # b)
-# En comparación al CodeBook perfecto, falta una breve definición de cada variable. Además, no se habla nada sobre valores perdidos. Tampoco se da ninguna indicación del uso del conjunto de datos. Además, no se indican los valores que puede tomar cada variable. El CodeBook carece de información estadística y de unidades de medida. Por último, tampoco se habla de los outliers.
+# En comparación al CodeBook perfecto, falta una breve definición de cada variable. Tampoco se da ninguna indicación del uso del conjunto de datos. Además, no se indican los valores que puede tomar cada variable. El CodeBook carece de información estadística y de unidades de medida. Por último, tampoco se habla de los outliers.
 
 ```
 
@@ -136,8 +136,6 @@ list.files('./data') # Mostrar los archivos en el directorio data.
 
 # Incluimos fecha  y la deberíamos almacenar
 dateDownloaded <- date()
-
-
 
 ```
 
