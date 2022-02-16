@@ -113,42 +113,37 @@ dateDownloaded <- date()
 ```
 
 ```{r}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# b)
+# En comparación al CodeBook perfecto, falta una breve definición de cada variable. Además, no se habla nada sobre valores perdidos. Tampoco se da ninguna indicación del uso del conjunto de datos. Además, no se indican los valores que puede tomar cada variable. El CodeBook carece de información estadística y de unidades de medida. Por último, tampoco se habla de los outliers.
 
 ```
 
 2.  El conjunto de datos **Wine Quality Dataset** está dividido en varios ficheros. Un fichero de texto *winequality.names* y dos ficheros con formato **CSV**. Uno para los vinos blancos y otro para los tintos. Usa la función **download.file**, descarga el fichero de texto y cárgalo realizando una lectura línea a línea. ¿Cuántas y cuáles son las variables medidas?. ¿Es posible localizar las variables automáticamente ?
 
 ```{r}
+# a)
+# Creamos directorio si no existe
+if (!file.exists("data")) {
+    dir.create("data")
+}
+# Descargamos fichero enlazado y lo almacenamos con el nombre deseado.
+library(lubridate)
 
+file<-'https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.names' # Enlace del CodeBook del conjunto de datos
+download.file(url=file, destfile = './data/wine.names') # Ruta local donde se guardará el CodeBook.
+
+list.files('./data') # Mostrar los archivos en el directorio data.
+
+# Incluimos fecha  y la deberíamos almacenar
+dateDownloaded <- date()
 
 
 
 ```
 
 ```{r}
-
-
+wine.names<-readLines(con='data/wine.names')
+str(wine.names)
 
 ```
 
